@@ -12,7 +12,6 @@ container.setAttribute('id', 'basket-promotion-notification');
 const selector = document.querySelector('.minicart');
 
 const location = new LocationController();
-// console.log(location.isBasket, location.isCheckout, location)
 
 if ( selector && (!location.isBasket && !location.isCheckout) ) {
   selector.parentNode.appendChild(container);

@@ -6,7 +6,6 @@ import BasketController from "@controllers/basket.controller"
 
 import SaveBadge from '@components/save-badge';
 import X from '@components/svg-icons/x';
-import Triangle from '@components/triangle';
 
 /** @jsx h */
 
@@ -48,13 +47,12 @@ const Container = () => {
         display: show ? 'block' : 'none'
       }}
     >
-      <Triangle />
       <div className="basket-notification-container__close-icon">
         <X onClick={handleXclick} />
       </div>
 
-      <div onClick={handleNotificationClick}>
-        <h2>OFFER ENDS SOON!</h2>
+      <div>
+        <h2>Offer ends soon!</h2>
 
         <div className="basket-notification-container__content">
           <div className="basket-notification-container__content-left">
@@ -67,6 +65,12 @@ const Container = () => {
               alt={item.alt}
             />
           </div>
+        </div>
+
+        <div className="basket-notification-container__view-basket-CTA-box">
+          <button onClick={handleNotificationClick}>
+            view basket & checkout
+          </button>
         </div>
       </div>
     </div>
