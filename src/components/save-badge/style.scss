@@ -1,0 +1,11 @@
+@use "../../global-styles/colors.scss";
+
+.basket-notification__save-badge {
+  color: colors.$white;
+  background-color: colors.$black;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  width: max-content;
+  line-height: 14px;
+}

@@ -1,0 +1,9 @@
+@use "../../global-styles/colors.scss";
+
+.basket-notification__triangle {
+  border: 8px solid transparent;
+  border-bottom-color: colors.$black;
+  position: absolute;
+  top: -17px;
+  right: 20px;
+}

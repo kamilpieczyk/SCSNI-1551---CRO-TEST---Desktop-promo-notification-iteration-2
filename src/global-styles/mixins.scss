@@ -1,0 +1,14 @@
+@mixin display($displayOption) {
+  display: $displayOption;
+}
+
+@mixin shadow {
+  box-shadow: 0px 6px 10px $shaddow;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
