@@ -31,6 +31,17 @@ const Container = () => {
     const item =  basket.getBestSaveItem();
     const sessionFlag = basket.checkSessionFlag();
 
+    let name = item.name
+
+    if ( name.split(' ').length > 5 ) {
+      name = item.name.split(' ');
+      name = name.slice(0, 5);
+      name[name.length-1] = name[name.length-1]+'...'
+      name = name.join(' ');
+    }
+    
+    item.name = name;
+
     setItem(item);
 
     if (!sessionFlag && item.name) {
