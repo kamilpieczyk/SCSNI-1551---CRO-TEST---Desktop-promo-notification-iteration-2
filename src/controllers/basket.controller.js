@@ -15,7 +15,7 @@ class BasketController extends Controller {
 
   /**
    * 
-   * @returns {{ name: String, image: String, alt: String, save: Number }}
+   * @returns {{ name: String, image: String, alt: String, save: Number, link: string }}
    */
   getBestSaveItem() {
     return this.#bestSaveItem;
@@ -34,7 +34,8 @@ class BasketController extends Controller {
       name: "",
       image: "",
       alt: "",
-      save: 0
+      save: 0,
+      link: ""
     }
 
     this.#items.forEach((item) => {
@@ -46,12 +47,14 @@ class BasketController extends Controller {
             bestSaveItem.image = item.images.small[0].urlOriginal;
             bestSaveItem.alt = item.images.small[0].alt;
             bestSaveItem.save = item.price.savings.value;
+            bestSaveItem.link = `/${item.id}.html`;
           }
           else if (item.price.savings.value > bestSaveItem.save) {
             bestSaveItem.name = item.productName;
             bestSaveItem.image = item.images.small[0].urlOriginal;
             bestSaveItem.alt = item.images.small[0].alt;
             bestSaveItem.save = item.price.savings.value;
+            bestSaveItem.link = `/${item.id}.html`;
           }
         }
       }

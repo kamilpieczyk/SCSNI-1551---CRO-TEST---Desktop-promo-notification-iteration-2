@@ -10,10 +10,10 @@ const XIcon = (props) => (
       <div />
     </div>
 
-    <div className="dy-close-btn-animated" {...props}>
+    {/* <div className="dy-close-btn-animated" {...props}>
       <div />
       <div />
-    </div>
+    </div> */}
   </Fragment>
 );
 

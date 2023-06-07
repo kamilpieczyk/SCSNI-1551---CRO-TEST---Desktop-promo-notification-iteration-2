@@ -67,7 +67,7 @@ const Container = () => {
 
         <div className="basket-notification-container__content">
           <div className="basket-notification-container__content-left">
-            <p>{ item.name }</p>
+            <a href={ item.link } title={ item.link }>{ item.name }</a>
             <SaveBadge amount={item.save}/>
           </div>
           <div className="basket-notification-container__content-right">

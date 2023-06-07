@@ -53,6 +53,16 @@
   display: flex;
   flex-direction: column;
   gap: 23px;
+
+  a {
+    color: colors.$black !important;
+    font-size: 12px !important;
+    margin-top: 8px;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
 }
 
 .basket-notification-container__close-icon {
@@ -74,7 +84,7 @@
 
 .basket-notification-container__view-basket-CTA-box {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 22px;
   display: grid;
   place-items: center;
 
