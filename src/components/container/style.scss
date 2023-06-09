@@ -1,8 +1,31 @@
 @use "../../global-styles/colors.scss";
 @use "../../global-styles/breakpoints.scss";
 
-.basket-notification-container {
+#basket-promotion-notification {
   position: absolute;
+  z-index: 100;
+  transition-duration: 0.4s;
+}
+
+.basket-notification-container---animate {
+  animation-name: basket-notification-container;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  transition-delay: 0.4s;
+  top: 70px !important;
+}
+
+@keyframes basket-notification-container {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 70px;
+  }
+}
+
+.basket-notification-container {
+  position: relative;
   top: 182px;
   right: 0;
   z-index: 100;
@@ -56,7 +79,7 @@
 
   a {
     color: colors.$black !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     margin-top: 8px;
 
     &:hover {

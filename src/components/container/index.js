@@ -51,6 +51,23 @@ const Container = () => {
     }
   }, []);
 
+  // handle sticky
+  useEffect(() => {
+    const container = document.getElementById('basket-promotion-notification')
+    const contentBox = document.querySelector('.basket-notification-container')
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        container.style.setProperty('position', 'fixed', 'important')
+        contentBox.classList.add('basket-notification-container---animate')
+      }
+      else {
+        container.style.removeProperty('position')
+        contentBox.classList.remove('basket-notification-container---animate')
+      }
+    })
+  }, [])
+
   return (
     <div 
       className="basket-notification-container"
