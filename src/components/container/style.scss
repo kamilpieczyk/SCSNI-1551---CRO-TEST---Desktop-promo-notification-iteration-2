@@ -5,6 +5,7 @@
   position: absolute;
   z-index: 100;
   transition-duration: 0.4s;
+  top: 2000px;
 }
 
 .basket-notification-container---animate {
@@ -12,21 +13,21 @@
   animation-duration: 0.4s;
   animation-direction: normal;
   transition-delay: 0.4s;
-  top: 70px !important;
+  top: calc(70px - 2000px) !important;
 }
 
 @keyframes basket-notification-container {
   0% {
-    top: 0;
+    top: -2000px;
   }
   100% {
-    top: 70px;
+    top: calc(70px - 2000px);
   }
 }
 
 .basket-notification-container {
   position: relative;
-  top: 182px;
+  top: calc(182px - 2000px);
   right: 0;
   z-index: 100;
   background-color: colors.$white;
